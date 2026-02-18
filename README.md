@@ -16,7 +16,7 @@ Building scalable backend systems • Solving complex problems • Writing produ
 
 # 👨‍💻 About Me
 
-🎓 **B.Tech Computer Science Engineering — NIT Raipur (2022–2026)**
+🎓 **B.Tech — NIT Raipur (2022–2026)**
 💻 Full-Stack Engineer focused on **scalable backend architecture**
 🧠 Strong in **Data Structures & Algorithms & System Design fundamentals**
 🚀 Passionate about building production-grade applications
