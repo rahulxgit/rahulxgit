@@ -90,6 +90,8 @@ Building scalable backend systems • Solving complex problems • Writing produ
 # 🐍 Contribution Graph
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/rahulxgit/rahulxgit/output/github-contribution-grid-snake.svg" />
+
 <img src="https://raw.githubusercontent.com/rahulxgit/rahulxgit/output/github-contribution-grid-snake.svg" />
 </p>
 
