@@ -1,46 +1,53 @@
+<!-- ===================== HERO SECTION ===================== -->
+
 <h1 align="center">Rahul Kumar</h1>
-<h3 align="center">Full-Stack Engineer • Backend Focus • Data Structures & Algorithms</h3>
 
 <p align="center">
-Building scalable backend systems • Solving complex problems • Writing production-quality code
+<img src="https://readme-typing-svg.herokuapp.com?size=28&duration=4000&color=0E75B6&center=true&vCenter=true&width=800&lines=Software+Engineer;Backend+Focused+Full-Stack+Developer;Data+Structures+%26+Algorithms+Enthusiast;Building+Scalable+Systems+for+Millions" />
+</p>
+
+<p align="center">
+Engineering scalable backend systems • Solving complex problems • Writing production-grade code
 </p>
 
 <p align="center">
 <img src="https://komarev.com/ghpvc/?username=rahulxgit&label=Profile%20Views&color=0e75b6&style=flat" />
 <img src="https://img.shields.io/badge/Focus-Backend%20Engineering-blue" />
 <img src="https://img.shields.io/badge/DSA-500%2B%20Problems-green" />
-<img src="https://img.shields.io/badge/Open%20to-Software%20Engineer%20Roles-orange" />
+<img src="https://img.shields.io/badge/System%20Design-Learning-orange" />
+<img src="https://img.shields.io/badge/Open%20to-Software%20Engineer%20Roles-success" />
 </p>
 
 ---
 
-# 👨‍💻 About Me
+# 👨‍💻 Professional Summary
 
-🎓 **B.Tech — NIT Raipur (2022–2026)**
-💻 Full-Stack Engineer focused on **scalable backend architecture**
-🧠 Strong in **Data Structures & Algorithms & System Design fundamentals**
-🚀 Passionate about building production-grade applications
-📈 Interested in high-performance distributed systems
+🎓 **B.Tech — National Institute of Technology, Raipur (2022–2026)**
+💻 Full-Stack Engineer with strong focus on **backend systems & performance optimization**
+🧠 Strong foundation in **Data Structures, Algorithms, and Core Computer Science**
+🚀 Passionate about building **high-scale production systems**
+📈 Interested in **distributed systems, system design, and scalable architecture**
 
 ---
 
-# 🏆 Achievements
+# 🏆 Achievements & Impact
 
-✔ **99.41 Percentile — Naukri Campus Young Turks 2025**
+✔ **99.41 Percentile — Naukri Campus Young Turks 2025** (National Skill Assessment)
 ✔ **TCS CodeVita Season 13 — Global Rank ~5652**
-✔ **500+ DSA problems solved across coding platforms**
-✔ Organized 200+ participant national-level hackathon at NIT Raipur
+✔ Solved **500+ DSA problems** across coding platforms
+✔ Organized **200+ participant national-level hackathon** at NIT Raipur
+✔ Demonstrated strong problem-solving and algorithmic thinking
 
 ---
 
-# 💼 Experience
+# 💼 Engineering Experience
 
 ### 💻 Back-End Software Engineering Job Simulation — Skyscanner (2024)
 
-• Built production-style application following enterprise architecture standards
-• Designed scalable UI modules with reusable component architecture
-• Achieved ~90% automated test coverage
-• Implemented clean architecture and separation of concerns
+• Built production-style application following enterprise coding standards
+• Designed scalable and reusable component architecture
+• Achieved ~90% automated test coverage using modern testing practices
+• Applied clean architecture & separation of concerns
 • Optimized maintainability and reduced future development effort
 
 ---
@@ -51,9 +58,9 @@ Building scalable backend systems • Solving complex problems • Writing produ
 
 `Java` `JavaScript` `Python` `SQL` `HTML` `CSS`
 
-### Frameworks & Technologies
+### Backend & Web Technologies
 
-`React.js` `Node.js` `Express.js` `Next.js` `TailwindCSS`
+`Node.js` `Express.js` `React.js` `Next.js` `REST APIs`
 
 ### Databases
 
@@ -65,8 +72,7 @@ Building scalable backend systems • Solving complex problems • Writing produ
 `Object-Oriented Programming`
 `Operating Systems`
 `DBMS`
-`REST APIs`
-`System Design Basics`
+`System Design Fundamentals`
 
 ### Developer Tools
 
@@ -74,10 +80,10 @@ Building scalable backend systems • Solving complex problems • Writing produ
 
 ---
 
-# 📊 Coding & GitHub Analytics
+# 📊 Engineering Metrics & Analytics
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=rahulxgit&show_icons=true&theme=default" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api?username=rahulxgit&show_icons=true&theme=default&rank_icon=github" height="165"/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rahulxgit&layout=compact" height="165"/>
 </p>
 
@@ -87,10 +93,10 @@ Building scalable backend systems • Solving complex problems • Writing produ
 
 ---
 
-# 🐍 Contribution Graph
+# 🐍 Contribution Activity
 
 <p align="center">
-  <img src= https://raw.githubusercontent.com/rahulxgit/rahulxgit/output/github-contribution-grid-snake.svg />
+<img src="https://raw.githubusercontent.com/rahulxgit/rahulxgit/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
@@ -98,6 +104,7 @@ Building scalable backend systems • Solving complex problems • Writing produ
 # 🤝 Connect With Me
 
 <p align="center">
+
 <a href="https://linkedin.com/in/rahulxnit">
 <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"/>
 </a>
@@ -113,13 +120,14 @@ Building scalable backend systems • Solving complex problems • Writing produ
 <a href="https://github.com/rahulxgit">
 <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github"/>
 </a>
+
 </p>
 
 ---
 
 # 🎯 Career Vision
 
-I aim to work as a **Software Engineer in product-based companies**, building scalable systems, solving challenging engineering problems, and contributing to high-impact software used by millions.
+I aim to work as a **Software Engineer in top product-based companies**, building scalable distributed systems, solving complex engineering challenges, and developing software that impacts millions of users globally.
 
 ---
 
