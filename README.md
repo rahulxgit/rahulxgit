@@ -42,13 +42,18 @@ Engineering scalable backend systems • Solving complex problems • Writing pr
 
 # 💼 Engineering Experience
 
-### 💻 Back-End Software Engineering Job Simulation — Skyscanner (2024)
+### 💻 Software Development Engineer Intern — Bluestock Fintech (2026)
 
-• Built production-style application following enterprise coding standards
-• Designed scalable and reusable component architecture
-• Achieved ~90% automated test coverage using modern testing practices
-• Applied clean architecture & separation of concerns
-• Optimized maintainability and reduced future development effort
+• Engineered a client-first daily puzzle platform (“Logic Looper”) using React, Redux Toolkit, IndexedDB, reducing server API
+calls by ~70% and enabling 100% offline gameplay capability.
+• Designed deterministic puzzle generation & validation system using crypto-based seeding, delivering 365+ unique puzzles/year
+with 0 server-side storage cost and <50ms validation latency.
+• Built scalable backend using Node.js, Express, PostgreSQL (Neon), Prisma, improving response time by ~40% and supporting
+500+ concurrent users.
+• Developed highly interactive UI with Tailwind CSS and Framer Motion, improving user engagement by ~35% through streak
+systems, heatmaps, and animations.
+• Optimized system for high-scale usage (1M+ DAU ready) using CDN-first architecture and ISR caching, reducing server load by
+~60% and improving global latency.
 
 ---
 
