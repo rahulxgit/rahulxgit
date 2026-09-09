@@ -190,6 +190,15 @@ Worked as an SDE intern on three production applications:
   </table>
 </div>
 
+### Recent Activity
+<!-- RECENT_ACTIVITY:START -->
+- Pushed to `main` in [`rahulxgit/rahul-portfolio`](https://github.com/rahulxgit/rahul-portfolio) (Sep 09, 2026)
+- Pushed to `main` in [`rahulxgit/mume-react-native`](https://github.com/rahulxgit/mume-react-native) (Sep 09, 2026)
+- Pushed to `main` in [`rahulxgit/driveclone`](https://github.com/rahulxgit/driveclone) (Sep 09, 2026)
+- Pushed to `main` in [`rahulxgit/ai-inference-playground`](https://github.com/rahulxgit/ai-inference-playground) (Sep 09, 2026)
+- Pushed to `main` in [`rahulxgit/logic-looper`](https://github.com/rahulxgit/logic-looper) (Sep 09, 2026)
+<!-- RECENT_ACTIVITY:END -->
+
 ### Contribution Activity
 
 <p align="center">
