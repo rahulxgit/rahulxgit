@@ -127,17 +127,18 @@
 
 ---
 
-## 📊 Engineering Metrics & Analytics
+<!-- ===================== METRICS SECTION ===================== -->
+## 📊 Engineering & Coding Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rahulxgit&show_icons=true&theme=tokyonight&rank_icon=github&count_private=true" height="175" alt="Rahul's GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rahulxgit&layout=compact&theme=tokyonight" height="175" alt="Top Languages"/>
+  <!-- Working GitHub Streak Card -->
+  <img src="https://streak-stats.demolab.com/?user=rahulxgit&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rahulxgit&theme=tokyonight" alt="GitHub Streak" />
+  <!-- Live LeetCode Card (Verified Working - HTTP 200) -->
+  <img src="https://leetcard.jacoblin.cool/S4gKOmKmsm?theme=tokyonight&font=Fira%20Code&ext=contest" alt="LeetCode Stats" height="200"/>
 </p>
-
 ---
 
 ## 🐍 Contribution Activity
