@@ -4,12 +4,12 @@
   <h1>Hi there, I'm Rahul Kumar 👋</h1>
 
   <p align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=1000&color=0E75B6&center=true&vCenter=true&width=900&lines=Full-Stack+%26+AI+Systems+Engineer;Building+Native+MCP+Servers+%26+23-Provider+LLM+Gateways;Ex-SDE+Intern+%40+Bluestock+Fintech+(6+Months+Production);500%2B+DSA+Problems+Solved+%7C+LeetCode+1%2C746;B.Tech+Graduate+from+NIT+Raipur+(Class+of+2026)" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=23&duration=2800&pause=1000&color=0E75B6&center=true&vCenter=true&width=850&lines=Full-Stack+%26+AI+Systems+Engineer;Building+Native+MCP+Servers+%26+LLM+Gateways;LeetCode+1%2C746+%7C+Ex-SDE+Intern+%40+Bluestock" alt="Typing SVG" />
   </p>
 
   <p align="center">
-    <b>Full-Stack & AI Systems Engineer</b> • B.Tech from <b>National Institute of Technology, Raipur (Class of 2026)</b><br>
-    <i>Production-first builder specializing in fault-tolerant AI infrastructure, native Model Context Protocol (MCP) servers, and low-latency distributed web platforms.</i>
+    <b>Full-Stack & AI Systems Engineer</b> • B.Tech from <b>National Institute of Technology, Raipur ('26)</b> • Based in <b>Pune, India</b><br>
+    <i>Production-first builder specializing in fault-tolerant LLM infrastructure, native Model Context Protocol (MCP) servers, and low-latency distributed web systems.</i>
   </p>
 
   <p align="center">
@@ -41,24 +41,49 @@
 ## ⚡ Executive Summary
 
 - 🎓 **B.Tech Graduate** from **National Institute of Technology, Raipur (NIT Raipur)**, Class of 2026.
-- 💼 **Ex-SDE Intern @ Bluestock Fintech (Feb 2026 – Aug 2026 · 6 Months):** Owned architecture, implementation, debugging, and deployment across 3 production web applications. Resolved a critical scoring engine defect (`startTimeRef` zero-initialization bug) and reduced server database reads by ~70% via IndexedDB-first caching.
-- 🤖 **Production AI Engineering Depth:** Built an enterprise **AI Gateway routing across 23 configured LLM provider adapters** with automated error-classified failover and dual-tier L1/L2 caching, and a **native Model Context Protocol (MCP) server** for autonomous AI agent filesystem operations.
+- 💼 **Ex-SDE Intern @ Bluestock Fintech (Feb 2026 – Aug 2026 · 6 Months):** Owned engineering lifecycle across 3 production web apps. Diagnosed the `startTimeRef` scoring defect in Logic Looper and reduced server database reads by ~70% via IndexedDB-first caching.
+- 🤖 **Production AI Engineering:** Architected an **AI Gateway routing across 23 configured LLM provider adapters** with automated error-classified failover and dual-tier caching (L1 Memory + L2 Redis), and a **native Model Context Protocol (MCP) server** for autonomous AI agent filesystem operations.
 - 🧠 **Algorithmic Rigor:** Solved **500+ DSA problems** across LeetCode, Codeforces, and CodeChef (**LeetCode Contest Rating: 1,746** · Top 15% globally). Scored **99.41 Percentile** nationwide in Naukri Campus Young Turks 2025 and **AIR 242** (98.88%ile) in All India NCAT 2026.
-- 📍 **Location:** Pune, Maharashtra, India (Open to Pune, Bengaluru, Hyderabad, Gurugram, and Remote).
-- 🚀 **Immediate Availability:** Actively interviewing for **SDE-1, Full-Stack Engineer, Backend Engineer, and AI Systems Engineer** roles at product companies and engineering-driven teams.
+- 📍 **Location:** Pune, Maharashtra, India (Open to Pune, Bengaluru, Hyderabad, Gurugram, or Remote). Actively interviewing for **SDE-1, Full-Stack Engineer, Backend Engineer, and AI Systems Engineer** roles.
 
 ---
 
-## 🛠️ Core Engineering Specialties & Architecture Paradigms
+## 🛠️ Real Engineering Problems I Had to Solve (War Stories & Trade-offs)
+
+> *Real engineering is about navigating trade-offs, debugging edge cases under pressure, and writing code that survives production traffic.*
+
+- **The `startTimeRef` Timer Bug (Logic Looper · Production):**  
+  Diagnosed a silent scoring engine defect in production where an uninitialized timer ref caused real-time scoring and daily streak counters to desynchronize during quick puzzle restarts. Fixed the ref lifecycle without triggering expensive React state re-renders across 10 distinct puzzle boards.
+- **Eliminating Node.js Call-Stack Overflow on Deep Trees (DriveClone):**  
+  Standard recursive directory sizing crashed Node's event loop with `RangeError: Maximum call stack size exceeded` when evaluating deeply nested folder hierarchies. Re-wrote the sizing engine into an iterative Breadth-First Search ($O(V+E)$), maintaining predictable memory usage even at arbitrary directory depths.
+- **Zero-Token Multi-Provider Health Probing (AI Gateway):**  
+  Rather than burning costly LLM token credits on synthetic chat completions to check provider availability, engineered lightweight background `GET /models` probes every 5 minutes across 23 provider adapters (OpenAI, Claude, Gemini, Groq, Cerebras, Mistral, DeepSeek), keeping latency metrics fresh at zero API cost.
+- **Taming UI Freezes at 100+ Tokens/Sec Bursts (AI Inference Playground):**  
+  High-frequency Server-Sent Events (SSE) streaming updates overwhelmed the browser's main thread. Solved this using `requestAnimationFrame` render batching coupled with an in-memory Longest Common Subsequence (LCS, $O(M \times N)$) token diff engine preserving whitespace, sustaining a smooth 60fps UI.
+- **Cascading Subtree Deletions in MongoDB (DriveClone):**  
+  Instead of issuing thousands of recursive `deleteOne` database operations for folder trees, designed a hybrid Adjacency List + Materialized Path schema, reducing entire subtree cascade deletions to a single $O(1)$ regex query (`path: /^parent\/child/`).
+
+---
+
+## 🏛️ Flagship Architecture: Fault-Tolerant Multi-LLM Router
 
 ```text
-┌─────────────────────────────────────────────────────────────────────────────────────────────┐
-│  AI & AGENTIC SYSTEMS       │ Native MCP Servers • Multi-Provider Routing • SSE Streaming   │
-│  DISTRIBUTED BACKEND        │ Dual-Tier Caching (L1 LRU + L2 Redis) • SQLite WAL • Docker   │
-│  REAL-TIME & CLIENT-FIRST   │ WebSockets State Sync (InstantDB) • IndexedDB • Redux Toolkit │
-│  CROSS-PLATFORM & MOBILE    │ React Native 0.73 • Background Audio Services • FlashList     │
-│  ALGORITHMIC PERFORMANCE    │ BFS O(V+E) Directory Sizing • LCS Token Diffing • SHA256 Seed │
-└─────────────────────────────────────────────────────────────────────────────────────────────┘
+Client Request (OpenAI Chat Format)
+      │
+      ▼
+ Express.js Middleware (Rate Limiter + 50MB Vision Payload Parser)
+      │
+      ▼
+ Orchestrator / Cache Check ────[L1 Memory LRU]────► Cache Hit (sub-10ms)
+      │                                 │
+      ├──[L1 Miss]──────────────────────┴──► [L2 Redis] ──► Cache Hit (sub-25ms)
+      │
+      ▼ (L1 + L2 Cache Miss)
+ Multi-Provider Router ──► [23 Adapters: OpenAI | Claude | Gemini | Groq | Cerebras]
+      │
+      ├── Transient (429 / 5xx / Network Spike) ──► Automatic Fallback to Next Provider
+      ├── Permanent (401 Auth / Quota Exceeded) ──► Mark Degraded & Route Alternate
+      └── Success ────────────────────────────────► SQLite WAL Persistence + SSE Stream to Client
 ```
 
 ---
@@ -67,20 +92,20 @@
 
 ### 💻 Software Development Engineer Intern — **Bluestock Fintech**
 *Pune, Maharashtra, India (Hybrid / Remote) • February 2026 – August 2026 (6 Months)*  
-*Verification Certificate: [View Certificate](https://drive.google.com/file/d/1BaannFUBfAZV7AhhSX1nBF8O7QHcGoJf/view?usp=sharing)*
+*Verification: [View Certificate](https://drive.google.com/file/d/1BaannFUBfAZV7AhhSX1nBF8O7QHcGoJf/view?usp=sharing)*
 
 - Exercised full-lifecycle engineering ownership (architecture, development, debugging, and deployment) across **3 production applications**:
   1. **Logic Looper (Daily Puzzle Platform):**
      - Architected a client-first daily puzzle web platform featuring 10 distinct puzzle games (Sudoku, Nonogram, Futoshiki, KenKen, Kakuro, Hitori, Shikaku, Bridges, Slitherlink, and Daily Word).
      - Engineered cryptographic calendar date seeding (`SHA256(YYYY-MM-DD + seed)`) to generate identical daily puzzle boards globally with zero server database storage overhead.
-     - **Critical Debugging Win:** Diagnosed and eliminated a persistent scoring engine defect caused by uninitialized timer references (`startTimeRef` zero-init bug), restoring accurate real-time scoring and persistent streaks across active user sessions.
+     - Resolved the critical `startTimeRef` timer bug, restoring accurate real-time scoring and persistent streaks.
      - Implemented an IndexedDB local caching layer that cut redundant backend reads by ~70% and guaranteed sub-50ms validation latency with complete offline playability.
-  2. **AI Profile Picture Maker (Open Source Generative Platform):**
-     - Engineered an asynchronous generative image pipeline utilizing **Stable Diffusion** for text-to-image synthesis, **GFPGAN** for facial enhancement, and **rembg** for automated background removal.
-     - Containerized workers into Docker microservices orchestrated with Redis queues to handle burst image generation workloads without worker starvation.
+  2. **AI Profile Picture Maker (Open Source Generative Tool):**
+     - Engineered an asynchronous image pipeline utilizing **Stable Diffusion** for text-to-image synthesis, **GFPGAN** for facial enhancement, and **rembg** for automated background removal.
+     - Containerized workers into Docker microservices orchestrated with Redis queues to handle burst image workloads without worker starvation.
   3. **The Corporate Blog (TCB):**
-     - Designed and shipped a high-performance, responsive corporate publishing engine for company-wide news releases and technical engineering articles.
-- **Codebase Hardening:** Decoupled hardcoded credentials into secure environment configurations, eliminated 13 dead code modules, and standardized Redux Toolkit provider trees.
+     - Designed and shipped a high-performance publishing platform for corporate announcements and engineering articles.
+- **Codebase Hardening:** Decoupled hardcoded credentials into secure environment variables, removed 13 unused source files, and standardized Redux Toolkit provider trees.
 
 ---
 
@@ -100,90 +125,16 @@
 
 ---
 
-## 🧠 Technical Skills & Systems Toolbox
+## 🧠 Engineering Stack & Technical Toolbox
 
-<table width="100%">
-  <tr>
-    <td width="20%"><b>AI & LLM Systems</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Model_Context_Protocol_(MCP)-10A37F?style=flat-square&logo=openai&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Multi--Provider_Routing-412991?style=flat-square&logo=anthropic&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Token_Streaming_(SSE)-FF6B6B?style=flat-square"/>
-      <img src="https://img.shields.io/badge/LCS_Token_Diffing-0E75B6?style=flat-square"/>
-      <img src="https://img.shields.io/badge/RAG_Pipelines-000000?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Vector_DBs-02569B?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Prompt_Engineering-3178C6?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Stable_Diffusion-FF9900?style=flat-square"/>
-      <img src="https://img.shields.io/badge/GFPGAN-2496ED?style=flat-square"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>Languages & Core</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-      <img src="https://img.shields.io/badge/JavaScript_(ES6+)-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-      <img src="https://img.shields.io/badge/Python_3-3776AB?style=flat-square&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/badge/SQL_(PostgreSQL)-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white"/>
-      <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>Frontend & Mobile</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-      <img src="https://img.shields.io/badge/Next.js_15_(App_Router)-000000?style=flat-square&logo=next.js&logoColor=white"/>
-      <img src="https://img.shields.io/badge/React_Native_0.73-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-      <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Zustand_5-443E38?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Tailwind_CSS_3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Shopify_FlashList-95BF47?style=flat-square&logo=shopify&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Vite_5-646CFF?style=flat-square&logo=vite&logoColor=white"/>
-      <img src="https://img.shields.io/badge/TanStack_Query_v5-FF4154?style=flat-square"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>Backend & Concurrency</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Express.js_4-000000?style=flat-square&logo=express&logoColor=white"/>
-      <img src="https://img.shields.io/badge/RESTful_APIs-02569B?style=flat-square"/>
-      <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square&logo=socket.io&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Redis_L2_Caching-DC382D?style=flat-square&logo=redis&logoColor=white"/>
-      <img src="https://img.shields.io/badge/JWT_Authentication-000000?style=flat-square&logo=json-web-tokens&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Bcryptjs-5B5B5B?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Rate_Limiting-20232A?style=flat-square"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>Databases & Storage</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
-      <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
-      <img src="https://img.shields.io/badge/SQLite_(WAL_Mode)-003B57?style=flat-square&logo=sqlite&logoColor=white"/>
-      <img src="https://img.shields.io/badge/InstantDB_(Realtime_Graph)-10A37F?style=flat-square"/>
-      <img src="https://img.shields.io/badge/Firebase_Firestore-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
-      <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white"/>
-      <img src="https://img.shields.io/badge/IndexedDB_(Client_Cache)-0E75B6?style=flat-square"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>DevOps & Infrastructure</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-      <img src="https://img.shields.io/badge/GitHub_Actions_(CI/CD)-2088FF?style=flat-square&logo=github-actions&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black"/>
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
-    </td>
-  </tr>
-</table>
+| Layer | Technologies & Core Paradigms | Shipped In Production / Implemented At |
+| :--- | :--- | :--- |
+| **AI & Agentic Systems** | Model Context Protocol (MCP) Servers, Multi-Provider Routing & Automatic Failover, Token Streaming (SSE), LCS Token Diffing, Prompt Engineering, Stable Diffusion, GFPGAN | **AI Gateway**, **DriveClone MCP**, **AI Inference Playground** |
+| **Backend & Distributed Systems** | Node.js, Express.js 4, RESTful APIs, Server-Sent Events (SSE), WebSockets, JWT Authentication, Rate Limiting, Helmet, Docker, Docker Compose | **AI Gateway**, **DriveClone**, **Realtime Gallery** |
+| **Databases, Caching & Storage** | PostgreSQL, MongoDB Atlas (Mongoose 8), SQLite (WAL Mode), Redis L2 Caching (ioredis), InstantDB (Graph), IndexedDB, Supabase, Firebase Firestore | **AI Gateway**, **Logic Looper**, **DriveClone**, **Smart Bookmark** |
+| **Frontend & Mobile Runtimes** | React 19, Next.js 15 (App Router), React Native 0.73, Redux Toolkit, Zustand 5, Shopify FlashList 1.6, TanStack Query v5, Tailwind CSS 3, Vite 5 | **Logic Looper**, **Mume React Native**, **Realtime Gallery** |
+| **Languages & Fundamentals** | TypeScript 5, JavaScript (ES6+), Python 3, SQL (PostgreSQL Dialect), Java, C++, Data Structures & Algorithms, Object-Oriented Programming, System Design | Core Problem Solving across all repos |
+| **DevOps & Verification** | Git, GitHub Actions (CI/CD), Docker, Jest, Postman, Linux, Vercel, Render, Overleaf / LaTeX | CI/CD deployments and test automation across all projects |
 
 ---
 
@@ -246,9 +197,11 @@
 
 ---
 
-## 🤝 Let's Build Together
+## 🤝 Let's Connect & Build
 
-I am actively interviewing for **Software Development Engineer (SDE-1), Full-Stack Engineer, Backend Engineer, and AI Systems Engineer** positions. If you are building high-scale distributed systems, agentic AI platforms, or products that value rock-solid engineering and low-latency performance, let's talk.
+I'm based in **Pune, India** and open to **SDE-1 / Full-Stack / Backend / AI Systems** roles across **Pune, Bengaluru, Hyderabad, Gurugram, or Remote**. 
+
+If you are building products that care about low latency, real-time synchronization, or fault-tolerant AI infrastructure, my inbox is open — I reply fast.
 
 <div align="center">
   <a href="https://www.linkedin.com/in/rahulxnit/">
@@ -274,6 +227,5 @@ I am actively interviewing for **Software Development Engineer (SDE-1), Full-Sta
 <br>
 
 <p align="center">
-  <i>"Production-first engineering: build systems that withstand real-world traffic, failover gracefully, and deliver measurable business value."</i><br>
-  Built by <b><a href="https://github.com/rahulxgit">Rahul Kumar</a></b>
+  Crafted by <b><a href="https://github.com/rahulxgit">Rahul Kumar</a></b>
 </p>
