@@ -193,7 +193,6 @@ Worked as an SDE intern on three production applications:
 ### Recent Activity
 <!-- RECENT_ACTIVITY:START -->
 - Pushed to `main` in [`rahulxgit/vaani`](https://github.com/rahulxgit/vaani) (Oct 14, 2026)
-- Pushed to `main` in [`rahulxgit/vaani`](https://github.com/rahulxgit/vaani) (Oct 13, 2026)
 <!-- RECENT_ACTIVITY:END -->
 
 ### Contribution Activity
